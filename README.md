@@ -1,5 +1,6 @@
 # Learn-Ruby
-Repo to Learn Ruby
+
+Repo to Learn Ruby. PR's are welcome.
 
 ## I/O
 
