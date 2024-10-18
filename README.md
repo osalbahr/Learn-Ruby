@@ -2,6 +2,8 @@
 
 Repo to Learn Ruby. PR's are welcome.
 
+You may notice C++ files or other languages. That is because sometimes I write a solution in a more familiar language first.
+
 ## I/O
 
 Input/output is similar to Python, Bash, and C.
