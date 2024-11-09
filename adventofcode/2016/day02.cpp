@@ -3,39 +3,58 @@
 using namespace std;
 
 // (x, y)
+using Point = pair<int,int>;
 #define mp make_pair
 #define x first
 #define y second
 
 #define REPORTP(P) printf("(%d, %d)\n", P.x, P.y)
 
-pair<int,int> pos = mp(0, 0);
+// Global position
+Point pos = mp(0, 0);
+
+// Valid point
+bool isValid(Point p) {
+    if (p.x < -1 || p.x > 1) {
+        return false;
+    }
+
+    if (p.y < -1 || p.y > 1) {
+        return false;
+    }
+
+    return true;
+}
 
 void move(char ch) {
     if (ch == 'U') {
-        if (pos.y < 1) {
-            pos = mp(pos.x, pos.y + 1);
+        Point newPos = mp(pos.x, pos.y + 1);
+        if (isValid(newPos)) {
+            pos = newPos;
         }
         return;
     }
 
     if (ch == 'D') {
-        if (pos.y > -1) {
-            pos = mp(pos.x, pos.y - 1);
+        Point newPos = mp(pos.x, pos.y - 1);
+        if (isValid(newPos)) {
+            pos = newPos;
         }
         return;
     }
 
     if (ch == 'R') {
-        if (pos.x < 1) {
-            pos = mp(pos.x + 1, pos.y);
+        Point newPos = mp(pos.x + 1, pos.y);
+        if (isValid(newPos)) {
+            pos = newPos;
         }
         return;
     }
 
     if (ch == 'L') {
-        if (pos.x > -1) {
-            pos = mp(pos.x - 1, pos.y);
+        Point newPos = mp(pos.x - 1, pos.y);
+        if (isValid(newPos)) {
+            pos = newPos;
         }
         return;
     }
