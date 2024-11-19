@@ -1,8 +1,6 @@
-// Note: TLE on test 4
-
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -11,19 +9,25 @@ pair<int, int> solve()
     int k;
     cin >> k;
     
-    vector<int> v(k);
-    for (int i = 0; i < k; i++)
-        cin >> v[i];
+    map<int,int> mp;
+    for (int i = 0; i < k; i++) {
+        int a;
+        cin >> a;
+        mp[a]++;
+    }
 
-    sort(v.begin(), v.end());
-    for (int i = 0; i < v.size(); i++) {
-        for (int j = i + 1; j < v.size(); j++) {
-            if (v[i] * v[j] == v.size() - 2) {
-                return make_pair(v[i], v[j]);
-            }
-            if (v[i] * v[j] > v.size() - 2) {
-                break;
-            }
+    for (auto it : mp) {
+        int n = it.first;
+
+        // case of n = m
+        if (mp[n] >= 2 && n * n == k - 2) {
+            return make_pair(n, n);
+        }
+
+        int m = (k - 2) / n;
+
+        if (n * m == k - 2 && mp[m] > 0) {
+            return make_pair(n, m);
         }
     }
 
