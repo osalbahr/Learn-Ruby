@@ -1,0 +1,9 @@
+# Ignore input files
+*.in
+
+# Ignore executables
+*/a
+*/b
+
+# Ignore valgrind core dumps
+vgcore.*
