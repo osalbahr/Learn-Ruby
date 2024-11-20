@@ -2,8 +2,14 @@
 *.in
 
 # Ignore executables
-*/a
-*/b
+a
+b
+c
+d
+e
+f
+g
+h
 
 # Ignore valgrind core dumps
 vgcore.*
