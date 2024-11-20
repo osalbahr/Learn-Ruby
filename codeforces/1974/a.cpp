@@ -9,20 +9,13 @@ void solve()
 
     int screens = (y + 1) / 2;
     
-    int vacant = 0;
-    if (y % 2 == 0) {
-        vacant = (15 - 8) * (y / 2);
-    } else {
-        vacant = (15 - 4) * 1;
-        vacant += (15 - 8) * (y - 1) / 2;
-    }
+    int vacant = 15 * screens - 4 * y;
 
     x -= vacant;
+    if (x < 0)
+        x = 0;
 
-    while (x > 0) {
-        screens++;
-        x -= 15;
-    }
+    screens += (x + 15 - 1) / 15;
 
     cout << screens << endl;
 }
