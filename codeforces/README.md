@@ -12,3 +12,4 @@ These problems seem similar. They are all about dividing X over Y slots:
 
 - [Setting up Camp](https://codeforces.com/contest/1945/problem/A) ([1945/a.cpp](https://github.com/osalbahr/Learn-Programming/blob/main/codeforces/1945/a.cpp))
 
+- [Recovering a Small String](https://codeforces.com/contest/1931/problem/A) ([1931/a.cpp](https://github.com/osalbahr/Learn-Programming/blob/main/codeforces/1931/a.cpp))
