@@ -1,6 +1,6 @@
 # Codeforces
 
-Laying some notes on
+Laying some notes on Codeforces.
 
 ## Dividing X Over Y Slots
 
