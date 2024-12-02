@@ -17,7 +17,7 @@ bool isSafe(string report)
     bool decreasing = true;
     bool increasing = true;
     for (int i = 0; i < levels.size() - 1; i++) {
-        if (abs(levels[i] == levels[i + 1])) {
+        if (levels[i] == levels[i + 1]) {
             return false;
         }
 
