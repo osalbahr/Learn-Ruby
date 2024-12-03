@@ -2,11 +2,21 @@
 
 using namespace std;
 
+bool isEnabled = true;
+
 int getMuls(const string& line)
 {
     int total = 0;
 
     for (int i = 0; i < line.size() - 4; i++) {
+        if (line.substr(i, 4) == "do()") {
+            isEnabled = true;
+        }
+
+        if (i < line.size() - 7 && line.substr(i, 7) == "don't()") {
+            isEnabled = false;
+        }
+
         if (line.substr(i, 4) == "mul(") {
             int a, b;
             
@@ -18,7 +28,8 @@ int getMuls(const string& line)
                 if (ch != ')')
                     continue;
 
-                total += a * b;
+                if (isEnabled)
+                    total += a * b;
             }
         }
     }
