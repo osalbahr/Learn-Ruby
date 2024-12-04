@@ -10,7 +10,7 @@ int getHorizontal(const vector<string>& input)
     int total = 0;
 
     for (const string& row : input) {
-        for (int i = 0; i < row.size() - 4; i++) {
+        for (int i = 0; i < row.size() - 3; i++) {
             if (row.substr(i, 4) == "XMAS") {
                 total++;
             }
